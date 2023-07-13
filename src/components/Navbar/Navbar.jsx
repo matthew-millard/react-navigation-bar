@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
 import navbarLinks from './navbarLinks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/pro-light-svg-icons';
+import { faBars, faXmark } from '@fortawesome/pro-light-svg-icons';
 import socialIcons from './socialIcons';
 import styles from './Navbar.module.css';
 
 class Navbar extends Component {
+  state = { clicked: false };
+
+  handleClick = () => {
+    this.setState({ clicked: !this.state.clicked });
+  };
   render() {
     return (
       <nav className={styles.nav}>
         <h1 className={styles.logo}>Matt Millard</h1>
         <div className={styles.menuIcon} onClick={this.handleClick}>
-          <FontAwesomeIcon icon={faBars} className={styles.menuIcon} />
+          <FontAwesomeIcon
+            icon={this.state.clicked ? faXmark : faBars}
+            className={`${styles.menuIcon} ${styles.displayNone} ${this.state.clicked ? styles.rotateIcon : ''}`}
+          />
         </div>
         <ul className={styles.links}>
           {navbarLinks.map((link, index) => {

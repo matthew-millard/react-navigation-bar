@@ -12,14 +12,25 @@
   color: var(--green);
   font-size: 3rem;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotateIcon {
+  transform: rotate(180deg);
+}
+
+.displayNone {
+  display: none;
 }
 
 .logo {
+  grid-area: logo;
   color: var(--white);
   margin-left: 4rem;
 }
 
 .links {
+  grid-area: links;
   display: flex;
   justify-content: space-around;
   font-size: 1.8rem;
@@ -45,6 +56,7 @@
 }
 
 .socialIcons {
+  grid-area: icons;
   display: flex;
   justify-content: flex-end;
   margin-right: 4rem;
