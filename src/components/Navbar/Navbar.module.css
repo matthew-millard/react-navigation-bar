@@ -1,0 +1,60 @@
+.nav {
+  height: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'logo links icons';
+  align-items: center;
+  background-color: var(--dark-navy);
+  /* border-bottom: 1px solid var(--muted-green); */
+}
+
+.menuIcon {
+  color: var(--green);
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.logo {
+  color: var(--white);
+  margin-left: 4rem;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.8rem;
+}
+
+.links li {
+  cursor: pointer;
+  padding: 0.8rem 2.4rem;
+}
+
+.links li a {
+  color: var(--green);
+  text-decoration: underline;
+  letter-spacing: 0.05em;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.5ex;
+  text-decoration-color: var(--green);
+  transition: text-underline-offset 150ms ease-in-out;
+}
+
+.links li a:hover {
+  text-underline-offset: 0.2ex;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 4rem;
+}
+
+.socialIcons > li {
+  padding: 2rem;
+}
+
+.socialIcons > li a {
+  font-size: 1.8rem;
+  color: var(--muted-green);
+}

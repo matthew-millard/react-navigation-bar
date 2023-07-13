@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Soehne';
+  src: url('./fonts/soehne-fonts/soehne-buch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Soehne';
+  src: url('./fonts/soehne-fonts/soehne-halbfett.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colors */
+  --dark-navy: #00010a;
+  --navy: #010215;
+  --light-navy: #172a45;
+  --vlight-navy: #303c55;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --vlight-slate: #ccd6f6;
+  --green: #64ffda;
+  --muted-green: #64ffdb89;
+  --white: #e6f1ff;
+
+  /* Fonts */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Soehne', sans-serif;
+  font-feature-settings: 'ss01';
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: var(--dark-navy);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+
+p,
+span {
+  font-size: 1.6rem;
+}
